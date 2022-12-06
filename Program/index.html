@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html>
+  <body>
+    <script type="text/javascript">
+      // The Code Written In Javascript to check if any number x is prime or not , after
+      // that we will find out the difference between next Prime number and x..
+
+      // A number is prime if it divisible by 1 and itself only, so we will do the same
+      // and check if the number is divisible by more than two numbers(i.e.1 and itself)
+      // then it is not a prime number else it is a prime number.
+
+      function checkForPrimeNumber(number) {
+        if (number == 1) {
+          document.write("1 is neither a Prime number nor Composite");
+        } else if (number > 1) {
+          for (let i = 2; i < number; i++) {
+            // if number is divisible by any number b/w 2 to n-1 then its not prime
+            if (number % i == 0) {
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+
+      // As it is given in Question that a number is given so let's take number = 7
+      const number = 7;
+      let isPrimeOrNot = checkForPrimeNumber(number);
+      if (isPrimeOrNot == true) document.write(`${number} is a prime number\n`);
+      else document.write(`${number} is not a prime number\n`);
+
+      // Not let's find out the next Prime number..
+      let nextPrimeNumber = number + 1;
+      while (1) {
+        if (checkForPrimeNumber(nextPrimeNumber) == true) {
+          break;
+        } else {
+          nextPrimeNumber = nextPrimeNumber + 1;
+        }
+      }
+
+      let difference = nextPrimeNumber - number;
+      document.write(
+        `Difference between number and nextPrimeNumber is ${difference} `
+      );
+    </script>
+  </body>
+</html>
