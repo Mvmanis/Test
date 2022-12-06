@@ -1,1 +1,21 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>proj</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+	<script src="index.js"></script>
+    <div class="important">This has the important class but is not a direct descendent of div with id "john" so will remain unchanged</div>
+    <div id="john">
+        <p>This is the div with id "john"</p>
+        <input id="name" placeholder="This is the input" autocomplete="off"/>
+        <div class="important">This has the important class and is a direct descendent of div with id "john" so will change on focus</div>
+        <div class="other">This does not have the important class but is a direct descendent of div with id "john" so will remain unchanged</div>
+    </div>
+  </body>
+</html>
