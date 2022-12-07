@@ -1,1 +1,22 @@
+As Far As I Know and learnt about JWt is :-
 
+JWT :- JWT stands for JSON Web Token. which is used to securely transfer information between two parties Or we can say, JWT is useful for Authorization and Information exchange.
+
+JSON Web Token is combination of three parts with dots. These three parts are
+1) Header
+2) Payload
+3) Signature.
+
+JWT typically looks like
+ 
+Eg. XXXXX.YYYYY.ZZZZZ
+
+Its Benefits Can be :-
+
+1) More compact: JSON is less verbose than XML, so when it is encoded, a JWT is smaller than a SAML token. This makes JWT a good choice to be passed in HTML and HTTP environments.
+
+2) More secure: JWTs can use a public/private key pair in the form of an X.509 certificate for signing. A JWT can also be symmetrically signed by a shared secret using the HMAC algorithm. And while SAML tokens can use public/private key pairs like JWT, signing XML with XML Digital Signature without introducing obscure security holes is very difficult when compared to the simplicity of signing JSON. 
+
+3) Easier to process: JWT is used at internet scale. This means that it is easier to process on user's devices, especially mobile.
+
+ 
